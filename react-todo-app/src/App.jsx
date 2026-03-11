@@ -11,6 +11,10 @@ export default function App() {
         setInputValue('')
     }
 
+    function deleteTodo(id){
+        setTodos(todos.filter(todo => todo.id !== id))
+    }
+
   return (
     <div className="container">
       <h1>Todo App</h1>
@@ -30,6 +34,7 @@ export default function App() {
         {todos.map(todo =>
             <li key = {todo.id} className="todo-item">
                 <span>{todo.text}</span>
+                <button className="delete-btn" onClick={()=> deleteTodo(todo.id)}>Delete</button>
                 </li>
         )}
         </ul>

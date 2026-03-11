@@ -23,3 +23,29 @@ h1 {
   margin-bottom: 30px;
   color: #e94560;
 }
+
+.input-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.input-box input {
+    flex: 1;
+    padding: 10px;
+border-radius: 8px;
+border: none;
+font-size: 16px;
+background: #16213e;
+color: white;
+border: 2px solid #0f3460;
+}
+
+.input-box button {
+  padding: 10px 20px;
+  background: #e94560;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}

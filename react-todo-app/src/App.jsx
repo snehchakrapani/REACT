@@ -3,6 +3,14 @@ import './App.css'
 
 export default function App() {
     const [inpuValue, setInputValue] = useState('')
+    const [todos, setTodos] = useState([])
+
+    function addTodo(){
+        if(inpuValue === '')return
+        setTodos([...todos,{id:Date.now(),text:inpuValue,completed:false}])
+        setInputValue('')
+    }
+
   return (
     <div className="container">
       <h1>Todo App</h1>
@@ -13,9 +21,18 @@ export default function App() {
         placeholder = "Enter todo..."
         value={inpuValue}
         onChange={(e) => setInputValue(e.target.value)}
+        onKeyDown = {(e)=> e.key === 'Enter' && addTodo()}    
     />
-    <button>Add</button>
+    <button onClick={addTodo}>Add</button>
     </div>
+
+    <ul className="todo list">
+        {todos.map(todo =>
+            <li key = {todo.id} className="todo-item">
+                <span>{todo.text}</span>
+                </li>
+        )}
+        </ul>
     </div>
   )
 }

@@ -72,3 +72,13 @@ border: 2px solid #0f3460;
   cursor: pointer;
   font-size: 14px;
 }
+
+.completed {
+  text-decoration: line-through;
+  color: gray;
+  cursor: pointer;
+}
+
+span {
+  cursor: pointer;
+}

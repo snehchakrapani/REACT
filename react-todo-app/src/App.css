@@ -11,7 +11,7 @@ body {
   min-height: 100vh;
   display: flex;
   justify-content: center;
-  padding-top: 50px;
+  padding-top: 50px; 
 }
 
 .container {
@@ -25,7 +25,7 @@ h1 {
 }
 
 .input-box {
-    display: flex;
+    display: flex; /*to put input and buttton side by side i have used it*/
     gap: 10px;
     margin-bottom: 20px;
 }
@@ -46,11 +46,11 @@ border: 2px solid #0f3460;
   color: white;
   border: none;
   border-radius: 8px;
-  cursor: pointer;
+  cursor: pointer; 
   font-size: 16px;
 }
 .todo-list{
-    list-style: none;
+    list-style: none; /*remove dot from ul*/
 }
 
 .todo-item{
@@ -74,11 +74,42 @@ border: 2px solid #0f3460;
 }
 
 .completed {
-  text-decoration: line-through;
+  text-decoration: line-through; 
   color: gray;
   cursor: pointer;
 }
 
 span {
   cursor: pointer;
+}
+.edit-mode {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+}
+
+.edit-input {
+  flex: 1;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 2px solid #e94560;
+  background: #16213e;
+  color: white;
+  font-size: 14px;
+}
+
+.edit-input:focus { outline: none; }
+
+.view-mode {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.btn-group {
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }

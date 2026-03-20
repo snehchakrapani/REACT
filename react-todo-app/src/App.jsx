@@ -1,6 +1,6 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './App.css'
-import Login from './Login'
+import Login from './TempLogin'
 import IconButton from '@mui/material/IconButton'
 import EditIcon from '@mui/icons-material/Edit'
 import SaveIcon from '@mui/icons-material/Save'
@@ -12,6 +12,15 @@ export default function App() {
   const [todos, setTodos] = useState([])
   const [editingId, setEditingId] = useState(null)
   const [editText, setEditText] = useState('')
+
+  useEffect(() => {
+    alert("Hey Welcome to my page")
+  }, [])
+
+  useEffect(() => {
+    alert("you logged in")
+  }, [isLoggedIn])
+  
 
   if (!isLoggedIn) {
     return <Login onLogin={() => setIsLoggedIn(true)} />
